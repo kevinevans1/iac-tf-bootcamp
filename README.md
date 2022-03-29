@@ -8,6 +8,7 @@ IaC Terraform Bootcamp
 - Windows Terminal https://docs.microsoft.com/en-us/windows/terminal/install
 - Azure CLI https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 - PowerShell 7 https://github.com/PowerShell/powershell/releases
+- Azure PowerShell Modules https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-7.3.2 
 - Azure subscription
 
 ### Bootcamp Steps
@@ -22,3 +23,12 @@ IaC Terraform Bootcamp
     - - On the System Properties window, select Environment Variables.
     - - Select the PATH variable, then click Edit.
     - - Click the New button, then type in the path where the Terraform executable is located.
+
+### Azure Subscription Configuration
+#### Azure CLI
+1. az login (login)
+2. set azure subscription refrence az account set --subscription "my sub"
+
+#### Azure PowerShell
+1. Connect-AzAccount
+2. Set-AzContext -Subscription <Subscription String>
