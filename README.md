@@ -9,13 +9,13 @@ IaC Terraform Bootcamp
 - Azure CLI https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 - PowerShell 7 https://github.com/PowerShell/powershell/releases
 - Azure PowerShell Modules https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-7.3.2 
-- Azure subscription
+- Azure subscription https://portal.azure.com
 
-### Bootcamp Steps
+### Boot Camp Steps
 
-1. Install and download preqsutites 
+1. Install and download prerequisites
 2. Configure VS Code (Extensions)
-3. Configure Terraform (Extract Terraform execuatable to c:\terraform)
+3. Configure Terraform (Extract Terraform executable to c:\terraform)
    - To add the Terraform executable directory to your PATH variable:
 
     - - Click on the Start menu and search for Settings. Open the Settings app.
@@ -27,8 +27,32 @@ IaC Terraform Bootcamp
 ### Azure Subscription Configuration
 #### Azure CLI
 1. az login (login)
-2. set azure subscription refrence az account set --subscription "my sub"
+2. set azure subscription reference az account set --subscription "my sub"
 
 #### Azure PowerShell
 1. Connect-AzAccount
-2. Set-AzContext -Subscription <Subscription String>
+2. Set-AzContext -Subscription "Subscription String"
+
+### Create Terraform Backend
+1. Navigate to to Terraform_remote_backend folder.
+2. Run the "azure_remote_backend.azcli"  line by line in terminal
+3. View the shared access key in terminal "$env:ARM_ACCESS_KEY=$ACCOUNT_KEY "
+
+### Initialize Terraform
+1. Open your terminal
+2. Navigate to your Terraform working directory via the CLI (cd..)
+3. Save current configuration 
+4. Run "terraform init" to initialize terraform backend and providers
+5. Run "terraform plan" to check current state
+6. Run "terraform apply" to deploy test deployment (a resource group should be created)
+7. Run "terraform destroy" to destroy our test deployment
+
+### L2 Resource Deployment
+In this module we will deploy the following resources into a single resource group. We will also utilize variables.
+
+The following resources will be deployed:
+- Resource Group
+- Storage Account
+- Virtual Network
+- Subnet
+- Windows Virtual Machine (Compute,Storage,Networking)

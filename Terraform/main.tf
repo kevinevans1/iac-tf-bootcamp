@@ -1,3 +1,5 @@
+#Terraform Configuration
+
 terraform {
   required_providers {
     azurerm = {
@@ -10,6 +12,7 @@ terraform {
         storage_account_name = "<storage_account_name>"
         container_name       = "tfstate"
         key                  = "terraform.tfstate"
+        access_key           = "access key" 
     }
 
 }
@@ -18,7 +21,9 @@ provider "azurerm" {
   features {}
 }
 
+#Resource Group
+
 resource "azurerm_resource_group" "state-demo-secure" {
   name     = "state-demo"
-  location = "eastus"
+  location = var.location
 }

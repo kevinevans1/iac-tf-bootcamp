@@ -1,2 +1,0 @@
-$ACCOUNT_KEY=(Get-AzStorageAccountKey -ResourceGroupName $RESOURCE_GROUP_NAME -Name $STORAGE_ACCOUNT_NAME)[0].value
-$env:ARM_ACCESS_KEY=$ACCOUNT_KEY
