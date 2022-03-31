@@ -55,4 +55,5 @@ The following resources will be deployed:
 - Storage Account
 - Virtual Network
 - Subnet
+- Network Security Group
 - Windows Virtual Machine (Compute,Storage,Networking)
