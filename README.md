@@ -33,6 +33,11 @@ IaC Terraform Bootcamp
 1. Connect-AzAccount
 2. Set-AzContext -Subscription "Subscription String"
 
+### Configure Git
+#### Perform via terminal
+1. Set your username: git config --global user.name "FIRST_NAME LAST_NAME"
+2. Set your email address: git config --global user.email "MY_NAME@example.com"
+
 ### Create Terraform Backend
 1. Navigate to to Terraform_remote_backend folder.
 2. Run the "azure_remote_backend.azcli"  line by line in terminal
