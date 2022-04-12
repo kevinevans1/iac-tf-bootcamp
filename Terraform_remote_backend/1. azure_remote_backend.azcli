@@ -1,6 +1,7 @@
 #Azure Stoargae Terraform Remote Backend Creation Script"
 #https://docs.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=powershell#
 
+#Set Environment Variables
 
 $RESOURCE_GROUP_NAME='tfstateRG01'
 $STORAGE_ACCOUNT_NAME="tfstate01$(get-random)"
